@@ -1,0 +1,21 @@
+name: Hello Node.js
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Print Hello message
+      run: echo "Hello from @medhareddy28"
